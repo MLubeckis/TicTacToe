@@ -1,13 +1,103 @@
+@font-face {
+  font-family: CherryBombOne;
+  src: url("fonts/CherryBombOne-Regular.ttf");
+}
+@font-face {
+  font-family: Rubik;
+  src: url("fonts/Rubik-VariableFont_wght.ttf");
+}
+
+:root {
+  font-family: Rubik;
+}
+
+*, button {
+  font-family: Rubik;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  display: none;
+  z-index: 0;
+  padding: 20px;
+  border: none;
+  box-shadow: 0px 0px 51px -16px rgba(162, 162, 165, 1);
+}
+
+.newGame {
+  display: flex;
+  flex-flow: column;
+  z-index: 1;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 440.1px;
+  height: 732.25px;
+  text-align: center;
+  padding: 20px;
+  border: none;
+  box-shadow: 0px 0px 51px -16px rgba(162, 162, 165, 1);
+}
+
+.newGame button {
+  font-size: 1.8rem;
+  padding: 12px 35px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 51px -16px rgba(162, 162, 165, 1);
+  border: none;
+  background-color: rgb(152, 181, 157);
+  transition: 0.3s ease-in;
+}
+
+.newGameBtn:hover {
+  background-color: rgb(146, 173, 151);
+  transition: 0.3s ease-in;
+}
+.newGameBtn:active {
+  scale: 0.9;
+  transition: 0.3s ease-in;
+}
+
+
+.gameInfo {
+  display: grid;
+  text-align: center;
+}
+
+.playerScores {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.playerScores p {
+  text-align: center;
+  box-shadow: 0px 0px 15px 0px rgba(162, 162, 165, 1);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 550;
+}
+
 .board {
     display: grid;
     height: 500px;
-    width: 500px;
+    width: 400px;
+    padding: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    border: 1px solid black;
-    gap: 5px;
-    padding: 2px;
-    background-color: yellow;
+    border: none;
+    gap: 20px;
+    background-color: transparent;
   }
   
   .cell {
@@ -15,8 +105,25 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 2rem;
-    border: 1px solid grey;
-    background: lightyellow;
+    font-family: CherryBombOne;
+    font-size: 5rem;
+    font-weight: 100;
+    border-radius: 10px;
+    border: none;
+    background: rgb(229, 233, 234);
+    box-shadow: 0px 0px 15px -2px rgba(162, 162, 165, 1);
     cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .cell:hover {
+    background: rgb(211, 211, 211);
+    scale: 1.1;
+    transition: 0.2s;
+  }
+
+  .cell:active {
+    box-shadow: 0px 0px 15px 0px rgba(162, 162, 165, 1);
+    scale: 0.9;
+    transition: 0.2s;
   }
